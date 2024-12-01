@@ -1,5 +1,5 @@
 #resource "aws_key_pair" "eks" {
-  key_name   = "eks"
+  #key_name   = "eks"
   # you can paste the public key directly like this
   #public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL6ONJth+DzeXbU3oGATxjVmoRjPepdl7sBuPzzQT2Nc sivak@BOOK-I6CR3LQ85Q"
   #public_key = file("~/.ssh/eks.pub")
@@ -64,7 +64,7 @@ module "eks" {
         ElasticLoadBalancingFullAccess = "arn:aws:iam::aws:policy/ElasticLoadBalancingFullAccess"
       }
       # EKS takes AWS Linux 2 as it's OS to the nodes
-      key_name = aws_key_pair.eks.key_name
+      #key_name = aws_key_pair.eks.key_name
     }
   }
 
